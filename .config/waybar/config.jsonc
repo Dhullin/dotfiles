@@ -15,6 +15,7 @@
 		"clock"	
 	],
 	"modules-right": [
+		"custom/updates",
 		"cava",
 		"privacy",
 		"bluetooth",
@@ -23,6 +24,7 @@
 		"memory",
 		"tray"
 	],
+
 	// indicator if in resize 'mode'
 	"hyprland/submap": {
 		"format": "{}",
@@ -81,5 +83,14 @@
 		"format": " {status}",
 		"format-connected": " {device_alias}",
 		"on-click": "kitty --class floating_shell -e bluetui" // Open bluetui in a floating window
+	},
+
+	"custom/updates": {
+		"format": "{}",
+		"return-type": "json",
+		"exec": "~/.config/waybar/check-updates.sh",
+		"interval": 3600,
+		"on-click": "kitty --classfloating_shell -e sudo pacman -Syu",
+		"tooltip": false
 	}
 }

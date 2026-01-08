@@ -24,11 +24,10 @@ window#waybar {
 	transition: all 200ms ease-in-out;
 	padding: 5px 5px;
 	min-width: 30px;
-	background: #1f1f28;
-	color: #dcd7ba;
+	background: alpha(#1f1f28, .8);
+	color: #72a7bc;
 	border-bottom: 3px solid #2d4f67; 
 	margin: 2px;
-	font-size: 20
 }
 
 #workspaces button.empty {
@@ -37,16 +36,18 @@ window#waybar {
 
 /* Visible on another monitor (Unfocused) */
 #workspaces button.visible {
-	background: alpha(#2d4f67, 0.8); /* Slightly transparent */
-	color: #dcd7ba;
+	background: alpha(#1f1f28, .8);
+	color: #72a7bc;
 	min-width: 60px;
+	border: 3px solid #2d4f67;
 }
 
 /* The one you are actually typing in (Focused) */
 #workspaces button.active {
-	background: #2d4f67; 
-	color: #c8c093;
+	background: alpha(#1f1f28, .8);
+	color: #dcd7ba;
 	min-width: 60px;
+	border: 3px solid #2d4f67;
 }
 
 /* Style for your 'dev_util' scratchpad (Workspace 5 / Key G) */
@@ -62,11 +63,18 @@ window#waybar {
 /* Ensure the red persists when they are focused */
 #workspaces button.special.active {
 	color: #1f1f28;    /* Dark font for contrast */
-	background: #ff5d62; /* Brighter red */
-	border-bottom: 3px solid #1f1f28;
+	background: alpha(#ff5d62, .8); /* Brighter red */
+	border: 1px solid #1f1f28;
 	min-width: 30px;  /* Expand when active */
 	margin: 0 5px;     /* Re-apply margins when visible */
 	padding: 0 10px;
+}
+
+#submap {
+	color: #c8c093;
+	background-color: alpha(#76946a, .8);
+	padding: 0 10px;
+	border-bottom: 3px solid #98bb6c
 }
 
 #clock {
@@ -75,6 +83,7 @@ window#waybar {
 	font-size: 36px;
 	font-weight: bold;
 	color: #c8c093;
+	border-top: 3px solid #c8c093;
 	border-bottom: 3px solid #c8c093;
 
 	/* Creates a 1px solid dark outline around the letters */
@@ -136,6 +145,30 @@ window#waybar {
 
 #tray {
 	border-bottom: 2px solid #2d4f67; /* Distinct background for the tray  */
+}
+
+/* Base style for the update module */
+#custom-updates {
+    padding: 0 10px;
+    margin: 0 4px;
+    border-radius: 10px;
+    background: alpha(#1f1f28, 80);
+}
+
+/* Color coding based on package count */
+#custom-updates.low {
+    color: #98bb6c; /* Kanagawa Green */
+    border-bottom: 2px solid #98bb6c;
+}
+
+#custom-updates.medium {
+    color: #ffa066; /* Kanagawa Orange */
+    border-bottom: 2px solid #ffa066;
+}
+
+#custom-updates.high {
+    color: #e82424; /* Kanagawa Red (Same as your scratchpad alert) */
+    border-bottom: 2px solid #e82424;
 }
 
 
