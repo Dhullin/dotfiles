@@ -1,0 +1,142 @@
+* {
+	border-radius: 10;
+	font-family: Roboto, Helvetica, Arial, sans-serif;
+	min-height: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/* Specific font size for the Left Monitor (DP-1) */
+#waybar.DP-1 {
+	font-size: 18px;
+}
+
+/* Specific font size for the Right Monitor (HDMI-A-1) */
+#waybar.HDMI-A-1 {
+	font-size: 24px;
+}
+
+window#waybar {
+	background: transparent; 
+}
+
+#workspaces button {
+	transition: all 200ms ease-in-out;
+	padding: 5px 5px;
+	min-width: 30px;
+	background: #1f1f28;
+	color: #dcd7ba;
+	border-bottom: 3px solid #2d4f67; 
+	margin: 2px;
+	font-size: 20
+}
+
+#workspaces button.empty {
+	min-width: 10px;
+}
+
+/* Visible on another monitor (Unfocused) */
+#workspaces button.visible {
+	background: alpha(#2d4f67, 0.8); /* Slightly transparent */
+	color: #dcd7ba;
+	min-width: 60px;
+}
+
+/* The one you are actually typing in (Focused) */
+#workspaces button.active {
+	background: #2d4f67; 
+	color: #c8c093;
+	min-width: 60px;
+}
+
+/* Style for your 'dev_util' scratchpad (Workspace 5 / Key G) */
+#workspaces button.special {
+	color: transparent;
+	background: transparent;
+	border: transparent;
+	margin: 0;         /* Remove margins */
+	padding: 0;        /* Remove padding */
+	min-width: 0;      /* Force width to zero when inactive */
+}
+
+/* Ensure the red persists when they are focused */
+#workspaces button.special.active {
+	color: #1f1f28;    /* Dark font for contrast */
+	background: #ff5d62; /* Brighter red */
+	border-bottom: 3px solid #1f1f28;
+	min-width: 30px;  /* Expand when active */
+	margin: 0 5px;     /* Re-apply margins when visible */
+	padding: 0 10px;
+}
+
+#clock {
+	background-color: #1f1f28;
+	padding: 0 10px;
+	font-size: 36px;
+	font-weight: bold;
+	color: #c8c093;
+	border-bottom: 3px solid #c8c093;
+
+	/* Creates a 1px solid dark outline around the letters */
+	text-shadow: 
+	-2px -2px 1 #1f1f28,  
+	2px -2px 1 #1f1f28,
+	-2px  2px 3 #1f1f28,
+	2px  2px 3 #1f1f28;
+}
+
+#waybar.HDMI-A-1 #clock {
+	font-size: 36px;
+}
+#waybar.DP-1 #clock {
+	font-size: 28px;
+}
+
+/* Base style for all right-side modules to look like buttons */
+#pulseaudio, #cpu, #memory, #bluetooth, #privacy, #tray {
+	padding: 0 10px;
+	margin: 0 4px;
+	border-radius: 10px; /* Matching your workspace buttons  */
+	background: alpha(#1f1f28, 80); /* Subtle dark background  */
+	color: #dcd7ba; /* Base Kanagawa foreground  */
+}
+
+#pulseaudio:hover, #cpu:hover, #memory:hover, #bluetooth:hover {
+	background: #2d4f67; /* Change background on hover  */
+	transition: all 0.3s ease;
+}
+
+/* Feedback when clicking the buttons */
+#cpu:active, #pulseaudio:active, #bluetooth:active {
+	background-color: #2d4f67; /* Kanagawa Blue-Grey */
+	color: #c8c093;            /* Kanagawa Gold highlight */
+	border-bottom: 2px solid #c8c093;
+}
+
+/* Individual color-coded buttons */
+#pulseaudio {
+	color: #7e9cd8; /* Blue */
+	border-bottom: 2px solid #7e9cd8;
+}
+
+#cpu {
+	color: #ffa066; /* Orange */
+	border-bottom: 2px solid #ffa066;
+}
+
+#memory {
+	color: #957fb8; /* Purple */
+	border-bottom: 2px solid #957fb8;
+}
+
+#bluetooth {
+	color: #7fb4ca; /* Cyan */
+	border-bottom: 2px solid #7fb4ca
+}
+
+#tray {
+	border-bottom: 2px solid #2d4f67; /* Distinct background for the tray  */
+}
+
+
+

@@ -1,0 +1,85 @@
+{
+	"Layer": "bottom",
+	"position": "top",
+	"margin-top": 10,
+	"margin-left": 200,
+	"margin-right": 200,
+	"height": 10,
+	"width": null,
+	"spacing": 8,
+	"modules-left": [
+		"hyprland/submap",
+		"hyprland/workspaces"
+	],
+	"modules-center": [
+		"clock"	
+	],
+	"modules-right": [
+		"cava",
+		"privacy",
+		"bluetooth",
+		"pulseaudio",
+		"cpu",
+		"memory",
+		"tray"
+	],
+	// indicator if in resize 'mode'
+	"hyprland/submap": {
+		"format": "{}",
+		"max-length": 8,
+		"tooltip": false
+	},
+	"tray": {
+		"icon-size": 21,
+		"spacing": 10
+	},
+
+	"hyprland/workspaces": {
+		"format": "{windows}", // This removes the workspace ID/Number and shows only the app icons
+		"window-rewrite-default": "",
+		"window-rewrite": {
+			"class<firefox>": "",
+			"class<kitty>": "",
+			"class<Godot>": "",
+			"class<thunar>": "󰉋",
+			"class<discord>": "",
+			"class<steam>": "",
+			"class<Aseprie>": ""
+		},
+		"persistent-workspaces": {
+			"DP-1": [1, 2, 3, 4 ],     // Left Monitor
+			"HDMI-A-1": [7, 8, 9, 10] // Right Monitor
+		},
+		"all-outputs": false,
+		"show-special": true
+	},
+	"memory": {
+		"format": " {percentage}%"
+	},
+
+	"cpu": {
+		"format": " {usage}%",
+		"on-click": "kitty --class floating_shell -e btop" // Open btop in a floating kitty window
+	},
+
+	"pulseaudio": {
+		"format": "{icon} {volume}%",
+		"format-muted": "󰝟",
+		"format-icons": {
+			"headphone": "",    // Icon for headsets
+			"hands-free": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": ["", "", ""] // Speaker icons based on volume
+		},
+		"on-click": "pavucontrol" // Opens the GUI audio controller
+	},
+
+	"bluetooth": {
+		"format": " {status}",
+		"format-connected": " {device_alias}",
+		"on-click": "kitty --class floating_shell -e bluetui" // Open bluetui in a floating window
+	}
+}
