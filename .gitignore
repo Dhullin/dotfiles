@@ -1,0 +1,31 @@
+# Sensitive Data
+.ssh/*
+!.ssh/config
+!.ssh/*.pub
+.aws/
+.gnupg/
+*.pem
+*.key
+.env
+
+# System & App History
+.bash_history
+.zsh_history
+.python_history
+.node_repl_history
+.sqlite_history
+.lesshst
+.nvidia-settings-rc
+
+# Cache and Temp files
+.cache/
+.dbus/
+.local/share/Trash/
+.thumbnails/
+.serverauth.*
+.Xauthority
+
+# Large/Unnecessary Directories
+node_modules/
+target/
+dist/
