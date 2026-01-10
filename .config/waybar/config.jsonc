@@ -1,7 +1,7 @@
 {
 	"Layer": "bottom",
 	"position": "top",
-	"margin-top": 10,
+	"margin-top": 15,
 	"margin-left": 200,
 	"margin-right": 200,
 	"height": 10,
@@ -24,8 +24,7 @@
 		"memory",
 		"tray"
 	],
-
-	// indicator if in resize 'mode'
+		// indicator if in resize 'mode'
 	"hyprland/submap": {
 		"format": "{}",
 		"max-length": 8,

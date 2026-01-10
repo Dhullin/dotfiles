@@ -28,6 +28,7 @@ window {
 	border: none;
 	background-color: transparent;
 	color: #dcd7ba;
+	padding_left: 15px;
 }
 
 /* Selected Entry (The "Active" item) */
@@ -42,6 +43,7 @@ window {
 	margin: 5px;
 	border: none;
 	color: inherit; /* Inherits from #entry or #entry:selected */
+	font-weight: bold;
 }
 
 /* Optional: Hide the scrollbar for a cleaner look */
