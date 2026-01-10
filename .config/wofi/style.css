@@ -1,0 +1,51 @@
+/* Window: Transparent dark background with Blue border */
+window {
+	margin: 0px;
+	border: 3px solid #1f1f28;
+	background-color: rgba(31, 31, 40, 0.9); /* #1f1f28 @ 90% */
+	border-radius: 10px; /* Matches your Waybar buttons */
+}
+
+/* The Search Bar */
+#input {
+	margin: 5px;
+	border: none;
+	color: #dcd7ba; /* Kanagawa FG */
+	background-color: #1f1f28; /* Solid dark background for input */
+	border-radius: 5px;
+}
+
+/* The Inner Container */
+#inner-box {
+	margin: 5px;
+	border: none;
+	background-color: transparent;
+}
+
+/* Unselected entries */
+#entry {
+	margin: 5px 0px;
+	border: none;
+	background-color: transparent;
+	color: #dcd7ba;
+}
+
+/* Selected Entry (The "Active" item) */
+#entry:selected {
+	border: none;
+	background-color: #1d4f67; /* Kanagawa Selection Blue */
+	color: #c8c093; /* Kanagawa Gold */
+	border-radius: 5px;
+}
+
+#text {
+	margin: 5px;
+	border: none;
+	color: inherit; /* Inherits from #entry or #entry:selected */
+}
+
+/* Optional: Hide the scrollbar for a cleaner look */
+#scroll {
+	margin: 0px;
+	border: none;
+}
